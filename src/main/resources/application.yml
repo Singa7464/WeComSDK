@@ -1,10 +1,15 @@
-
 server:
   port: 8080
-feign:
-  httpclient:
-    enabled: true
 
+# forest配置
+forest:
+  max-retry-count: ${FOREST_RETRY_COUNT:1} # 请求失败后重试次数，默认为0次不重试
+  max-retry-interval: ${FOREST_MAX_RETRY_INTERVAL:1000} #重试间隔时间
+  connect-timeout: ${FOREST_CONNECT_TIMEOUT:3000} #链接超时时间
+  timeout: ${FOREST_TIMEOUT:3000}  # 请求超时时间
+  variables: #全局变量 企微和微信接口地址
+    weComServerUrl: ${FOREST_VARIABLES_WE_COM_SERVER_URL:https://qyapi.weixin.qq.com/}
+    weComePrefix: ${FOREST_VARIABLES_WE_COME_PREFIX:cgi-bin}
 
 
 
