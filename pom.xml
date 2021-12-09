@@ -17,6 +17,7 @@
 		<java.version>1.8</java.version>
 		<fastjson.version>1.2.78</fastjson.version>
 		<spring-cloud.version>2021.0.0</spring-cloud.version>
+		<forest.version>1.5.14</forest.version>
 	</properties>
 
 	<dependencyManagement>
@@ -45,8 +46,9 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<groupId>com.dtflys.forest</groupId>
+			<artifactId>forest-spring-boot-starter</artifactId>
+			<version>${forest.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
